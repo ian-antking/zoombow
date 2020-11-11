@@ -25,15 +25,17 @@ end
 
 -- Key mappings --
 function handle_minikey_00(pressed)
-  if key_02_pressed then
-    volume_down(pressed)
+  key_00_pressed = pressed
+  if pressed then
+    set_volume_leds()
   else
-    toggle_audio(pressed)
+    set_audio_video_leds()
   end
+
 end
 
 function handle_minikey_01(pressed)
-  if key_02_pressed then
+  if key_00_pressed then
     volume_up(pressed)
   else
     toggle_video(pressed)
@@ -41,11 +43,10 @@ function handle_minikey_01(pressed)
 end
 
 function handle_minikey_02(pressed)
-  key_02_pressed = pressed
-  if pressed then
-    set_volume_leds()
+  if key_00_pressed then
+    volume_down(pressed)
   else
-    set_audio_video_leds()
+    toggle_audio(pressed)
   end
 end
 
