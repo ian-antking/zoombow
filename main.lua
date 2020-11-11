@@ -51,9 +51,9 @@ function handle_minikey_02(pressed)
 end
 
 function set_audio_video_leds()
-  button_led(false, 0, audio_status)
+  keybow.set_pixel(0, 0, 0, 0)
   button_led(false, 1, video_status)
-  keybow.set_pixel(2, 0, 0, 0)
+  button_led(false, 2, audio_status)
 end
 
 function set_volume_leds()
