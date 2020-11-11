@@ -57,9 +57,9 @@ function set_audio_video_leds()
 end
 
 function set_volume_leds()
-  keybow.set_pixel(0, 204, 153, 255)
-  keybow.set_pixel(1, 153, 0, 204)
-  keybow.set_pixel(2, 255, 255, 0)
+  keybow.set_pixel(0, 255, 255, 0)
+  keybow.set_pixel(2, 153, 0, 204)
+  keybow.set_pixel(1, 204, 153, 255)
 end
 
 
@@ -77,7 +77,7 @@ function toggle_audio(pressed)
     audio_status = not audio_status
   end
 
-  button_led(pressed, 0, audio_status)
+  button_led(pressed, 2, audio_status)
 end
 
 -- Command(⌘)+Shift+V: Start/stop video --
